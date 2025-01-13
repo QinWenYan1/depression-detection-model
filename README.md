@@ -11,15 +11,85 @@ Before you begin, ensure you have the following installed:
 
 ## Installation
 
-1. Clone the repository:
-```
+1. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/QinWenYan1/depression-detection-model.git
+   cd depression-detection-model
+   ```
+
+2. **Install Dependencies:**
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Install OpenAI GPT-3.5 Turbo:**
+
+   ```bash
+   pip install openai
+   ```
+
+## Setting Up Environment Variables
+
+To use the OpenAI API, you need to set your API key as an environment variable.
+
+### macOS/Linux
+
+1. **Open Terminal**
+
+2. **Set the Environment Variable Temporarily:**
+
+   ```bash
+   export OPENAI_API_KEY="your-api-key-here"
+   ```
+
+3. **Set the Environment Variable Permanently:**
+
+   Add the export command to your shell configuration file (e.g., `~/.bashrc`, `~/.zshrc`):
+
+   ```bash
+   echo 'export OPENAI_API_KEY="your-api-key-here"' >> ~/.bashrc
+   # or for zsh
+   echo 'export OPENAI_API_KEY="your-api-key-here"' >> ~/.zshrc
+   ```
+
+4. **Reload the Configuration:**
+
+   ```bash
+   source ~/.bashrc
+   # or for zsh
+   source ~/.zshrc
+   ```
+
+### Windows
+
+1. **Open Command Prompt or PowerShell**
+
+2. **Set the Environment Variable Temporarily:**
+
+   ```cmd
+   set OPENAI_API_KEY=your-api-key-here
+   ```
+
+3. **Set the Environment Variable Permanently:**
+
+   ```cmd
+   setx OPENAI_API_KEY "your-api-key-here"
+   ```
+
+4. **Restart Command Prompt**
+
+   Close and reopen the Command Prompt to apply the changes.
 
 ## Usage
 
-1. **Audio Transcription**
+1. **Audio Transcription:**
+
    ```bash
    python transcribe.py [depression_detection_model/transcripts]
    ```
+
    This will generate a transcript in the `transcripts` folder.
 
 ## Project Structure
@@ -60,5 +130,5 @@ Project Link: [https://github.com/QinWenYan1/depression-detection-model](https:/
 
 # Commit and push the changes
 git add README.md
-git commit -m "Update README with comprehensive installation and usage instructions"
-git push origin dev-whisper-implementation
+git commit -m "Update README with installation and environment variable instructions"
+git push origin main
